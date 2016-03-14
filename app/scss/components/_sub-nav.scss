@@ -1,0 +1,60 @@
+.sub-nav {
+    background-color: $grey;
+    height: 50px;
+
+    &__wrapper {
+        max-width: 940px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__logo {
+        float: left;
+
+        font-size: 24px;
+        color: white;
+        line-height: 50px;
+    }
+
+    &__arrow-icon {
+        background: url('images/assets.png') no-repeat -168px -15px;
+        float: left;
+
+        width: 15px;
+        height: 20px;
+        
+        padding: 0 10px;
+        margin-left: 15px;
+
+        @include transform-translate(0, 70%);
+    }
+
+    &__navigation {
+        float: right;
+        line-height: 50px;
+
+        ul {
+            font-size: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 15px 0 15px;
+        }
+
+        a {
+            font-family: Varela;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    &__magnifier-icon {
+        background: url('images/assets.png') -265px -16px;
+        width: 19px;
+        height: 20px;
+        @include transform-translate(0, 25%);
+    }
+}

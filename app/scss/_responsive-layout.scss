@@ -1,0 +1,270 @@
+@media screen and (max-width: 940px) {
+	.wrapper {
+		main { margin: 0 1%;}
+
+		main { width: 64% }
+		aside { 
+			width: 32%; 
+			margin-right: 1%;
+		}
+	}
+
+	//#######################################
+	//## ARTICLES ###########################
+	//#######################################
+
+	.article-vertical-list {
+		img { display: none; }
+	}
+
+	.article-vertical-list__desc {
+		width: 90%;
+		padding: 7px 0 7px 0;
+	}
+
+	.article--news, .article--sport {
+		width: 28%;
+	}
+
+	.article-container--half {
+		width: 45.5%;
+		h1 {font-size: 20px;}
+	}
+
+	.article--news-carousel {
+		margin-right: 15px;
+	}
+
+	.article--local-news, 
+	.article--editorials, 
+	.article--news-carousel,
+	.article--news, 
+	.article--sport 
+	{
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	//#######################################
+	//## HEADER #############################
+	//#######################################
+
+	.header__prev-arrow, .header__next-arrow { top: 35%; }
+
+	//#######################################
+	//## BANNERS ############################
+	//#######################################
+
+	.banner--125x125 {
+		margin-left: 5px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.banner-section__wrapper {
+		text-align: center;
+		padding: 2px;
+	}
+
+	//#######################################
+	//## GALLERY ############################
+	//#######################################
+
+	.gallery__prev-arrow, .gallery__next-arrow {
+		top: 50%;
+		@include transform-translate(0, -50%);
+	}
+
+	.gallery__thumbnails {
+		display: none;
+	}
+
+	//#######################################
+	//## FOOTER #############################
+	//#######################################
+
+	footer .wrapper {
+		margin: 0 5%;
+	}
+	.newsletter {
+		overflow: hidden;
+		input { 
+			width: auto; 
+		}
+		&__subscribe-btn {
+			margin: 10px 0 0 0;
+		}
+	}
+	.author {
+		width: 98%;
+		margin: 0 1%;
+	}
+
+	//#######################################
+	//## FACEBOOK ###########################
+	//#######################################
+
+	.fb_iframe_widget {
+		margin-bottom: 15px;
+	}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+	.wrapper {
+		main { width: 98%; }
+		aside { display: none; }
+	}
+
+	//#######################################
+	//## NAVIGATION #########################
+	//#######################################
+
+	.slicknav_nav {
+		text-align: center;
+		li a {
+			font-size: 20px;
+		}
+	}
+
+	.sub-nav__navigation li a {
+		font-size: 18px;
+	}
+
+	//#######################################
+	//## HEADER #############################
+	//#######################################
+
+	.header {
+		&__caption { 
+			width: 90%; 
+			a { font-size: 24px;}
+		}
+		&__info {
+			span { font-size: 18px;}
+			h1 { font-size: 22px; }
+		}
+	}
+	
+	//#######################################
+	//## ARTICLES ###########################
+	//#######################################
+
+	.article-vertical-list--twitter-feed {
+		h1 { display: none; }
+		width: 98%;
+	}
+
+	.article__desc {
+		span { font-size: 14px; }
+		p { font-size: 16px; }
+	}
+
+	.article-container  {
+		min-height: 350px;
+		h1 { font-size: 28px; }
+		a { font-size: 20px; }
+	}
+
+	.article-container--half {
+		width: 46.5%;
+	}
+
+	//#######################################
+	//## FOOTER #############################
+	//#######################################
+
+	footer .wrapper {
+		width: 96%;
+		margin: 0 2%;
+
+		.articles {
+			padding-top: 10px;
+		}
+	}
+
+	.kenaz-social,
+	.newsletter 
+	{ 
+		width: 98%; 
+		text-align: center;
+		padding: 50px 0;
+		border-bottom: 1px solid lighten($grey, 5%);
+		p {
+			margin: 15px 0;
+		}
+	}
+	
+	.article-vertical-list--twitter-feed { padding-bottom: 50px; }
+
+	.tags-widget,
+	.article-vertical-list--featured,
+	.kenaz-social__arrow
+	{ display: none; }
+
+	.author__info {
+		text-align: center;
+		padding-bottom: 20px;
+		span:first-of-type { float: none; }
+		span:last-of-type { display: none; }
+	}
+}
+
+@media screen and(max-width: 640px) {
+	.article--business:nth-child(3),
+	.article--business:nth-child(4) {
+		display: none;
+	}
+
+	.article--business {
+		width: 98%;
+	}
+
+	.article-container--half {
+		width: 98%;
+		h1 {font-size: 20px;}
+	}
+
+	.article--editorials, 
+	.article--local-news 
+	{
+		img {width: 100%;}
+		margin-right: 15px;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+
+	//#######################################
+	//## NAVIGATION #########################
+	//#######################################
+
+	.slicknav_nav {
+		text-align: center;
+		li a {
+			font-size: 18px;
+		}
+	}
+
+	.sub-nav {
+		display: none;
+	}
+
+	//#######################################
+	//## ARTICLES ###########################
+	//#######################################
+
+	.article.article--news, .article.article--sport {
+		width: 45%;
+		img {width: 100%;}
+		&:last-of-type { display: none; }
+	}
+}

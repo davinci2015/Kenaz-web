@@ -1,0 +1,43 @@
+.kenaz-social {
+	width: 33%;
+	float: left;
+
+	&__arrow {
+		background: url('images/assets.png') -212px -101px;
+		float: left;
+
+		width: 29px;
+		height: 46px;
+
+		margin: -5px 15px 0 0;
+	}
+
+	&__rss { background: url('images/assets.png') -8px -157px; }
+	&__facebook { background: url('images/assets.png') -58px -157px }
+	&__twitter { background: url('images/assets.png') -108px -157px; } 
+	&__dribbble { background: url('images/assets.png') -158px -157px; }
+	&__linkedin { background: url('images/assets.png') -208px -157px; }
+	&__youtube { background: url('images/assets.png') -258px -157px; }
+	&__skype { background: url('images/assets.png') -308px -157px; }
+
+	&__rss, &__facebook, &__twitter, &__dribbble, &__linkedin, &__youtube, &__skype {
+		display: inline-block;
+		
+		width: 35px;
+		height: 35px;
+
+		margin-right: 5px;
+
+		cursor: pointer;
+	}
+
+	h1 { color: $blue; }
+
+	p {
+		clear: both;
+		font-size: 14px;
+		color: lighten($grey, 25%);
+
+		margin: 20px 0;
+	}
+}

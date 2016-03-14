@@ -1,0 +1,7 @@
+@mixin transform-translate($args...) {
+    -webkit-transform: translate($args);
+    -moz-transform: translate($args);
+    -ms-transform: translate($args);
+    -o-transform: translate($args);
+    transform: translate($args);
+}

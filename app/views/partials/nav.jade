@@ -1,0 +1,9 @@
+- var navItems = {'NEWS': 'blue', 'BUSINESS': 'red', 'SPORT': 'green', 'LIFE': 'blue', 'TECH': 'yellow', 'TRAVEL': 'brown'};
+
+nav.menu
+	ul
+		each val, key in navItems
+			li(data-color="#{val}")
+				a(href="#")= key
+
+

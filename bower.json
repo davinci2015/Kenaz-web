@@ -1,0 +1,23 @@
+{
+  "name": "Kenaz",
+  "description": "Plava Tvornica Task",
+  "main": "main.js",
+  "authors": [
+    "Danijel Vincijanović"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slicknav": "https://github.com/ComputerWolf/SlickNav.git#^1.0.5",
+    "slick-carousel": "^1.5.9",
+    "jquery": "^2.2.1"
+  }
+}

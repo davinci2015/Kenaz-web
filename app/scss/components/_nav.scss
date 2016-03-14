@@ -1,0 +1,90 @@
+.menu {
+	background-color: $primary;
+    height: 50px;
+
+    line-height: 50px;
+    white-space: nowrap;
+
+    ul {
+        position: relative;
+        
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto; 
+        
+        font-size: 0;
+    }
+
+    a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        position: relative;
+        height: 47px;
+        display: inline-block;
+        
+        margin: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+        
+        border-bottom: 3px solid;
+
+        overflow: hidden;
+        z-index: 999;
+	}
+
+    li:before {
+        position: absolute;
+        content: "";
+
+        top: 100px;
+        width: 200px;
+        height: 50px;
+
+        margin-left: -80px;
+
+        z-index: -1;
+        @include transition(all 200ms ease-in-out);
+    }
+
+    li:hover:before {
+        top: 0;
+    }
+
+    $colorPallete: $blue, $red, $green, $blue, $yellow, $brown;
+    @for $i from 1 through 6 {
+        li:nth-child(#{$i}) {
+            border-bottom-color: nth($colorPallete, $i);
+        }
+        li:nth-child(#{$i}):before {
+            background-color: nth($colorPallete, $i);
+        }
+    }
+}
+
+.slicknav_menu {
+    display: none;
+    background-color: $primary;
+    li {
+        margin-top: 10px;
+    }
+    & a:hover {
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    & ul {
+        margin: 0 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display:none;
+    }
+	.slicknav_menu {
+        display:block;
+    }
+}

@@ -1,0 +1,10 @@
+.banner-section {
+	width: 100%;
+	
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	background-color: darken(white, 15%);
+
+	&__wrapper { padding: 20px; }
+}

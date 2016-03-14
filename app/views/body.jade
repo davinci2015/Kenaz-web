@@ -1,0 +1,39 @@
+include partials/sub-nav.jade
+include partials/nav.jade
+.wrapper
+	.banner.banner--940x120
+		span 940×120
+	header
+		include partials/header.jade
+	main
+		include partials/news.jade
+		include partials/sport.jade
+		.banner.banner--940x120
+			span 620×120
+		include partials/business.jade
+		.banner.banner--940x120
+			span 620×120
+		include partials/news-carousel.jade
+		include partials/editorials.jade
+		include partials/local-news.jade
+		.banner.banner--940x120
+			span 940×120
+	aside
+		include partials/sidebar/popular.jade
+		include partials/sidebar/social.jade
+		include partials/sidebar/kenazTV.jade
+		include partials/sidebar/banner-section.jade
+		include partials/sidebar/facebook.jade
+	figure 
+		include partials/gallery.jade
+footer 
+	.wrapper
+		.top
+			include partials/footer/kenaz-social.jade
+			include partials/footer/newsletter.jade
+			include partials/footer/tags-widget.jade
+		.articles
+			include partials/footer/featured.jade
+			include partials/footer/random-posts.jade
+			include partials/footer/twitter-feed.jade
+	include partials/footer/author.jade

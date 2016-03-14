@@ -1,0 +1,9 @@
+.gallery
+	.gallery__magnifier
+	.gallery__carousel
+		- for(var x = 1; x < 8; x++)
+			img(src="images/gallery-#{x}.jpg" alt="gallery")
+	.gallery__thumbnails
+		- for(var x = 1; x < 8; x++)
+			.gallery__thumb-wrapper
+				img(src="images/gallery-#{x}.jpg" alt="thumbnail")
