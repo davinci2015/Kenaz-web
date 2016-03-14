@@ -42,8 +42,8 @@ app/
 		variables/
 	views/			
 		partials/
-	dist/
-		bower_components/
-		fonts/
-		images/
+dist/
+	bower_components/
+	fonts/
+	images/
 ```	
