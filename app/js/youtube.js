@@ -5,11 +5,11 @@ define(function() {
         height    : '150',
         width     : '100%',
         APIkey    : 'AIzaSyDLvyMHjOqhQFLQtdaPuksbArSp8rf8TIM',
-        videoId   : 'A3ytTKZf344',
+        videoId   : 'HSs6iQwTTcY',
         url       : 'https://www.googleapis.com/youtube/v3/search',
         pause     : 'kenazTV__pause',
         player    : '',
-        playlist  : ['A3ytTKZf344'],
+        playlist  : ['HSs6iQwTTcY'],
 
         cacheElem: function() {
             this.$controls = {
