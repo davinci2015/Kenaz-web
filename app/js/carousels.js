@@ -1,21 +1,21 @@
-define( function() {
+define(function () {
 
     var carousels = {
 
-        cacheElem: function() {
+        cacheElem: function () {
             this.$carousel = {
-                header 		   : $('.header__carousel'),
-                gallery  	   : $('.gallery'),
+                header: $('.header__carousel'),
+                gallery: $('.gallery'),
                 galleryCarousel: $('.gallery__carousel'),
-                thumbnails 	   : $('.gallery__thumbnails'),
-                thumbWrapper   : $('.gallery__thumb-wrapper'),
-                news  		   : $('.news-carousel'),
-                editorials 	   : $('.editorials-carousel'),
-                localNews 	   : $('.local-news-carousel')
+                thumbnails: $('.gallery__thumbnails'),
+                thumbWrapper: $('.gallery__thumb-wrapper'),
+                news: $('.news-carousel'),
+                editorials: $('.editorials-carousel'),
+                localNews: $('.local-news-carousel')
             };
         },
 
-        setArrows: function() {
+        setArrows: function () {
             this.arrows = {
                 header: {
                     prev: "<div class='header__prev-arrow'></div>",
@@ -40,7 +40,7 @@ define( function() {
             }
         },
 
-        startCarousels: function() {
+        startCarousels: function () {
             this.$carousel.header.slick({
                 autoplay: true,
                 autoplaySpeed: 5000,
@@ -95,18 +95,18 @@ define( function() {
             });
         },
 
-        setActiveThumbnail: function() {
-            var that   = this;
+        setActiveThumbnail: function () {
+            var that = this;
             var active = 'gallery__thumb-active';
             this.$carousel.thumbWrapper.eq(0).addClass(active);
 
-            this.$carousel.gallery.on('beforeChange', function(event, slick, curr, next) {
+            this.$carousel.gallery.on('beforeChange', function (event, slick, curr, next) {
                 that.$carousel.thumbWrapper.removeClass(active);
                 that.$carousel.thumbWrapper.eq(next).addClass(active);
             });
         },
 
-        init: function() {
+        init: function () {
             this.cacheElem();
             this.setArrows();
             this.startCarousels();

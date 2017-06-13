@@ -1,41 +1,39 @@
-define(function() {
+define(function () {
+    var nav = {
+        colors: {
+            blue: '#299ec3',
+            red: '#ee6151',
+            green: '#84c14f',
+            blue: '#299ec3',
+            yellow: '#fcc44d',
+            brown: '#a99765'
+        },
 
-	var nav = {
+        cacheElem: function () {
+            this.$menu = $('.menu'),
+                this.$menuItems = this.$menu.find('ul li')
+        },
 
-		colors: {
-			blue: 	'#299ec3',
-			red: 	'#ee6151',
-			green: 	'#84c14f',
-			blue: 	'#299ec3',
-			yellow: 	'#fcc44d',
-			brown: 	'#a99765'
-		},
+        setNavigation: function () {
+            var that = this;
+            this.$menu.slicknav({label: ''});
+            this.$menuItems.first().css('background-color', this.colors.blue);
 
-		cacheElem: function() {
-			this.$menu = $('.menu'),
-			this.$menuItems = this.$menu.find('ul li')
-		},
+            this.$menuItems.on('click', function () {
 
-		setNavigation: function() {
-			var that = this;
-			this.$menu.slicknav({label: ''});
-			this.$menuItems.first().css('background-color', this.colors.blue);
+                that.$menuItems.each(function () {
+                    $(this).css('background-color', 'transparent');
+                });
 
-			this.$menuItems.on('click', function() {
+                $(this).css('background-color', that.colors[$(this).attr('data-color')]);
+            });
+        },
 
-				that.$menuItems.each( function() {
-					$(this).css('background-color', 'transparent');
-				});
+        init: function () {
+            this.cacheElem();
+            this.setNavigation();
+        }
+    };
 
-				$(this).css('background-color', that.colors[$(this).attr('data-color')]);
-			});
-		},
-
-		init: function() {
-			this.cacheElem();
-			this.setNavigation();
-		}
-	};
-
-	return nav;
+    return nav;
 });
